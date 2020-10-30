@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "farmers",
+  "info": {
+    "name": "farmers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "adhar": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "general",
+        "sc"
+      ]
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "unknown"
+      ]
+    },
+    "surveyNumber": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "crops": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "personal-details.address",
+      "required": true
+    }
+  }
+}

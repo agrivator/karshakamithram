@@ -1,3 +1,3 @@
-# Karshakamithram Backend
+# Strapi application
 
-Should be added
+A quick description of your strapi application

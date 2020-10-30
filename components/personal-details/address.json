@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_personal_details_addresses",
+  "info": {
+    "name": "address",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "houseName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

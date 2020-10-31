@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "panchayats",
+  "info": {
+    "name": "panchayats",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "district": {
+      "model": "district",
+      "via": "panchayats"
+    }
+  }
+}

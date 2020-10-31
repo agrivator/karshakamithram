@@ -2,12 +2,20 @@
   "collectionName": "components_personal_details_addresses",
   "info": {
     "name": "address",
-    "icon": "address-book"
+    "icon": "address-book",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "houseName": {
       "type": "string",
+      "required": true
+    },
+    "panchayat": {
+      "model": "panchayats"
+    },
+    "wardNumber": {
+      "type": "biginteger",
       "required": true
     }
   }

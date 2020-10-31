@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/panchayats",
+      "handler": "panchayats.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/panchayats/count",
+      "handler": "panchayats.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/panchayats/:id",
+      "handler": "panchayats.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/panchayats",
+      "handler": "panchayats.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/panchayats/:id",
+      "handler": "panchayats.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/panchayats/:id",
+      "handler": "panchayats.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

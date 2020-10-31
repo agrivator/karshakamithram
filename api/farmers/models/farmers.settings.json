@@ -52,8 +52,18 @@
     "address": {
       "type": "component",
       "repeatable": false,
-      "component": "personal-details.address",
+      "component": "farmer-details.address",
       "required": true
+    },
+    "cultivatedLand": {
+      "type": "component",
+      "repeatable": true,
+      "component": "farmer-details.area"
+    },
+    "bankAccount": {
+      "type": "component",
+      "repeatable": false,
+      "component": "farmer-details.bank-account"
     }
   }
 }

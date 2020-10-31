@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_farmer_details_bank_accounts",
+  "info": {
+    "name": "bankAccount",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "accountNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "ifsc": {
+      "type": "string",
+      "required": true
+    },
+    "accountHolderName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

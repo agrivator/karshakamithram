@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_farmer_details_areas",
+  "info": {
+    "name": "area",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "area": {
+      "type": "decimal",
+      "required": true
+    },
+    "ownership": {
+      "type": "enumeration",
+      "enum": [
+        "own",
+        "lease"
+      ]
+    },
+    "typeOfLand": {
+      "type": "enumeration",
+      "enum": [
+        "gardenLand",
+        "wetLand"
+      ]
+    }
+  }
+}

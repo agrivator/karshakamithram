@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@atlaskit/atlassian-navigation": "^0.12.2",
         "@atlaskit/avatar": "^20.0.6",
         "@atlaskit/banner": "^11.0.5",
         "@atlaskit/button": "^15.1.1",
@@ -13,6 +14,7 @@
         "@atlaskit/page-layout": "^0.10.9",
         "@atlaskit/pagination": "^13.0.8",
         "@atlaskit/progress-indicator": "^9.0.2",
+        "@atlaskit/side-navigation": "^0.7.9",
         "@atlaskit/spinner": "^15.0.5",
         "@atlaskit/tabs": "^12.0.6",
         "@atlaskit/textfield": "^4.0.9",

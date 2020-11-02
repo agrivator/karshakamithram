@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import AuthContext, { AuthContextProps } from './index';
+import AuthContext, { AuthContextProps, User } from './index';
 
 export const ACCESS_TOKEN = 'glass_admin_token';
 export const REFRESH_TOKEN = 'glass_admin_refresh';
@@ -17,7 +17,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }: AuthProviderPro
 
     const [auth, setAuth] = useState({ token, refresh, logged, user });
 
-    const login = (accessToken: string, accessRefresh: string, userDetails: object): void => {
+    const login = (accessToken: string, accessRefresh: string, userDetails: User): void => {
         localStorage.setItem(ACCESS_TOKEN, accessToken);
         localStorage.setItem(REFRESH_TOKEN, accessRefresh);
         setAuth({ logged: true, refresh, token, user: userDetails });

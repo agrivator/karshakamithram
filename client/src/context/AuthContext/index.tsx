@@ -11,15 +11,15 @@ export interface AuthKey {
     token: string | null;
     refresh: string | null;
     logged: boolean;
-    user: User | {};
+    user: User;
 }
 
 export interface AuthContextProps {
     auth: AuthKey;
-    login: (accessToken: string, accessRefresh: string, userDetails: object) => void;
+    login: (accessToken: string, accessRefresh: string, userDetails: User) => void;
     logout: () => void;
 }
 
-const AuthContext = createContext<AuthContextProps | {}>({});
+const AuthContext = createContext<AuthContextProps | Record<string, unknown>>({});
 
 export default AuthContext;

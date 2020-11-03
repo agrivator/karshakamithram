@@ -1,22 +1,15 @@
 import { createContext } from 'react';
-
-export interface User {
-    id?: number;
-    email?: string;
-    isSupervisor?: boolean;
-    isActive?: boolean;
-}
+import { UserDetails } from 'api/api.interface';
 
 export interface AuthKey {
     token: string | null;
-    refresh: string | null;
     logged: boolean;
-    user: User;
+    user: UserDetails | Record<string, unknown>;
 }
 
 export interface AuthContextProps {
     auth: AuthKey;
-    login: (accessToken: string, accessRefresh: string, userDetails: User) => void;
+    login: (accessToken: string, userDetails: UserDetails) => void;
     logout: () => void;
 }
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { lazy } from 'react';
 
 // import MinimalLayout from 'layouts/MinimalLayout';
 
-import LoginPage from 'pages/LoginPage';
-import AddFarmersDataPage from 'pages/AddFarmersDataPage';
+const LoginPage = lazy(() => import('pages/LoginPage'));
+const AddFarmersDataPage = lazy(() => import('pages/AddFarmersDataPage'));
 
 export default [
     {

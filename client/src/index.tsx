@@ -4,12 +4,13 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from 'App';
 import Loading from 'components/Loading';
+import AuthProvider from 'context/AuthContext/AuthProvider';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />}>
+        <AuthProvider>
             <App />
-        </Suspense>
-    </React.StrictMode>,
+        </AuthProvider>
+    </Suspense>,
     document.getElementById('root')
 );

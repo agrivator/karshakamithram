@@ -8,6 +8,7 @@ module.exports = {
     rules: {
         // 'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['off'],
+        'react/jsx-props-no-spreading': ['off'],
     },
     parserOptions: {
         ecmaVersion: 2018,

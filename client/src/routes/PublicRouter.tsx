@@ -15,7 +15,7 @@ const PublicRouter: React.FC<PublicRouterProps> = ({
 }: PublicRouterProps) => {
     const { auth } = useContext(AuthContext) as AuthContextProps;
 
-    if (auth.logged && restricted) return <Navigate to="/profile" />;
+    if (auth.logged && restricted) return <Navigate to="/farmer/add" />;
 
     return (
         <Layout>

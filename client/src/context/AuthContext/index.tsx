@@ -13,6 +13,6 @@ export interface AuthContextProps {
     logout: () => void;
 }
 
-const AuthContext = createContext<AuthContextProps | Record<string, unknown>>({});
+const AuthContext = createContext<AuthContextProps | null>(null);
 
 export default AuthContext;

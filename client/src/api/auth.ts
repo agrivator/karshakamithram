@@ -14,7 +14,7 @@ export const loginAPI = async (userDetails: LoginAPI): Promise<LoginAPIReturn> =
     });
 
     if (error || !data) {
-        throw new Error('Login Failed');
+        throw new Error('Given credentials not matching');
     }
 
     return data;
@@ -24,7 +24,7 @@ export const loginAPI = async (userDetails: LoginAPI): Promise<LoginAPIReturn> =
  * to get logged in user's details
  * @returns {object} details about user
  */
-export const getUserDetails = async (): Promise<UserDetails> => {
+export const getUserDetailsAPI = async (): Promise<UserDetails> => {
     const { data, error } = await request<UserDetails>({
         url: '/users/me',
         method: 'GET',

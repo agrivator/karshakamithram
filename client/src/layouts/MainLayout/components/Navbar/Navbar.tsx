@@ -22,7 +22,11 @@ const Navbar: React.FC = () => {
         <AtlassianNavigation
             label="site"
             moreLabel="More"
-            primaryItems={[<PrimaryButton isHighlighted>Farmers</PrimaryButton>]}
+            primaryItems={[
+                <PrimaryButton isHighlighted key={0}>
+                    Farmers
+                </PrimaryButton>,
+            ]}
             renderProductHome={ProductHome}
         />
     );

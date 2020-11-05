@@ -34,7 +34,7 @@ const LoginPage: React.FC = () => {
         try {
             const { jwt, ...loginDetails } = await loginAPI(data);
             login(jwt, loginDetails.user);
-            navigate('farmer/add', { replace: true });
+            navigate('/farmers/add', { replace: true });
         } catch (error) {
             setTimeoutState(error.message);
         }

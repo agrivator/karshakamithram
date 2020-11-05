@@ -6,6 +6,7 @@ import { LoadingButton, ButtonGroup } from '@atlaskit/button';
 import PersonalDetailsForm from './components/FormParts/PersonalDetails';
 import BankDetails from './components/FormParts/BankDetails';
 import AddressDetails from './components/FormParts/AddressDetails';
+import CultivatedLandDetails from './components/FormParts/CultivatedLandDetails';
 
 const AddFarmersDataPage: React.FC = () => {
     return (
@@ -25,6 +26,9 @@ const AddFarmersDataPage: React.FC = () => {
                                     </GridColumn>
                                     <GridColumn medium={4}>
                                         <AddressDetails />
+                                    </GridColumn>
+                                    <GridColumn medium={12}>
+                                        <CultivatedLandDetails />
                                     </GridColumn>
                                 </Grid>
                             </form>

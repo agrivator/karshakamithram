@@ -4,11 +4,12 @@ import Page, { Grid, GridColumn } from '@atlaskit/page';
 import Form, { FormHeader, FormSection, FormFooter, ErrorMessage, Field } from '@atlaskit/form';
 import { LoadingButton, ButtonGroup } from '@atlaskit/button';
 import PersonalDetailsForm from './components/FormParts/PersonalDetails';
+import BankDetails from './components/FormParts/BankDetails';
 
 const AddFarmersDataPage: React.FC = () => {
     return (
         <Page>
-            <Grid>
+            <Grid spacing="comfortable">
                 <GridColumn medium={12}>
                     <Form onSubmit={(data) => console.log('form data', data)}>
                         {({ formProps, submitting }) => (
@@ -17,6 +18,9 @@ const AddFarmersDataPage: React.FC = () => {
                                 <Grid>
                                     <GridColumn medium={4}>
                                         <PersonalDetailsForm />
+                                    </GridColumn>
+                                    <GridColumn medium={4}>
+                                        <BankDetails />
                                     </GridColumn>
                                 </Grid>
                             </form>

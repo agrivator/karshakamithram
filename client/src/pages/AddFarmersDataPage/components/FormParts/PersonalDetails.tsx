@@ -23,16 +23,16 @@ const categoryOptions = [
 const PersonalDetailsForm: React.FC = () => {
     return (
         <FormSection title="Contact Information">
-            <Field name="name" defaultValue="" label="name" isRequired>
+            <Field name="name" defaultValue="" label="Name" isRequired>
                 {({ fieldProps }) => <TextField {...fieldProps} />}
             </Field>
-            <Field name="contact" defaultValue="" label="contact no." isRequired>
+            <Field name="contact" defaultValue="" label="Contact no." isRequired>
                 {({ fieldProps }) => <TextField {...fieldProps} type="number" />}
             </Field>
-            <Field name="adhar" defaultValue="" label="adhar" isRequired>
+            <Field name="adhar" defaultValue="" label="Adhar no." isRequired>
                 {({ fieldProps }) => <TextField {...fieldProps} type="number" />}
             </Field>
-            <Field<ValueType<OptionType>> name="gender" defaultValue={[]} label="gender" isRequired>
+            <Field<ValueType<OptionType>> name="gender" defaultValue={[]} label="Gender" isRequired>
                 {({ fieldProps: { id, ...rest }, error }) => (
                     <Select<OptionType>
                         validationState={error ? 'error' : 'default'}
@@ -46,7 +46,7 @@ const PersonalDetailsForm: React.FC = () => {
             <Field<ValueType<OptionType>>
                 name="category"
                 defaultValue={[]}
-                label="category"
+                label="Category"
                 isRequired
             >
                 {({ fieldProps: { id, ...rest }, error }) => (

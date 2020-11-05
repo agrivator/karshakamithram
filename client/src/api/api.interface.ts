@@ -8,6 +8,12 @@ export interface ErrorHandlerFormat {
     details: Record<string, unknown>;
 }
 
+/**
+ * *****************************************************************************
+ * Backend Data interfaces
+ * *****************************************************************************
+ */
+
 export interface UserDetails {
     id: number;
     username: string;
@@ -25,6 +31,22 @@ export interface UserRole {
     type: string;
 }
 
+export interface Panchayats {
+    id: number;
+    name: string;
+    district: Districts;
+}
+
+export interface Districts {
+    id: number;
+    name: string;
+}
+
+/**
+ * *****************************************************************************
+ * API Interfaces
+ * *****************************************************************************
+ */
 export interface LoginAPI {
     identifier: string;
     password: string;

@@ -5,6 +5,7 @@ import Form, { FormHeader, FormSection, FormFooter, ErrorMessage, Field } from '
 import { LoadingButton, ButtonGroup } from '@atlaskit/button';
 import PersonalDetailsForm from './components/FormParts/PersonalDetails';
 import BankDetails from './components/FormParts/BankDetails';
+import AddressDetails from './components/FormParts/AddressDetails';
 
 const AddFarmersDataPage: React.FC = () => {
     return (
@@ -15,12 +16,15 @@ const AddFarmersDataPage: React.FC = () => {
                         {({ formProps, submitting }) => (
                             <form {...formProps}>
                                 <FormHeader title="Add Farmer Details" />
-                                <Grid>
+                                <Grid layout="fluid">
                                     <GridColumn medium={4}>
                                         <PersonalDetailsForm />
                                     </GridColumn>
                                     <GridColumn medium={4}>
                                         <BankDetails />
+                                    </GridColumn>
+                                    <GridColumn medium={4}>
+                                        <AddressDetails />
                                     </GridColumn>
                                 </Grid>
                             </form>

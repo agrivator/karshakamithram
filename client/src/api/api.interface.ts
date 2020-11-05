@@ -14,6 +14,11 @@ export interface ErrorHandlerFormat {
  * *****************************************************************************
  */
 
+/**
+ * *****************************************************************************
+ * User
+ * *****************************************************************************
+ */
 export interface UserDetails {
     id: number;
     username: string;
@@ -29,6 +34,47 @@ export interface UserRole {
     name: string;
     description: string;
     type: string;
+}
+
+/**
+ * *****************************************************************************
+ * Farmer
+ * *****************************************************************************
+ */
+
+export interface Farmer {
+    id: number;
+    contact: number;
+    adhar: string;
+    gender: string;
+    category: string;
+    address: Address;
+    bankAccount: BankDetails;
+    cultivatedLand: CultivatedLand[];
+}
+
+/**
+ * *****************************************************************************
+ * Utility like pachayat, district etc
+ * *****************************************************************************
+ */
+
+export interface BankDetails {
+    accountHolderName: string;
+    accountNumber: string;
+    ifsc: string;
+}
+
+export interface Address {
+    houseName: string;
+    wardNumber: number;
+    panchayat: Panchayats | Panchayats['id'];
+}
+
+export interface CultivatedLand {
+    area: number;
+    typeOfLand: 'wetLand' | 'gardenLand';
+    ownerShip: 'own' | 'lease';
 }
 
 export interface Panchayats {

@@ -43,12 +43,7 @@ const PersonalDetailsForm: React.FC = () => {
                     />
                 )}
             </Field>
-            <Field<ValueType<OptionType>>
-                name="category"
-                defaultValue={[]}
-                label="Category"
-                isRequired
-            >
+            <Field<ValueType<OptionType>> name="category" label="Category" isRequired>
                 {({ fieldProps: { id, ...rest }, error }) => (
                     <Select<OptionType>
                         validationState={error ? 'error' : 'default'}

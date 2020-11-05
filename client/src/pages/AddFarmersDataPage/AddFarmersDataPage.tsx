@@ -1,19 +1,26 @@
 import React from 'react';
 
-import Page, { Grid, GridColumn } from '@atlaskit/page';
-import Form, { FormHeader, FormSection, FormFooter, ErrorMessage, Field } from '@atlaskit/form';
+import { Grid, GridColumn } from '@atlaskit/page';
+import Form, { FormHeader, FormFooter } from '@atlaskit/form';
 import { LoadingButton, ButtonGroup } from '@atlaskit/button';
+import Container from 'components/Container';
+import { Farmer } from 'api/api.interface';
+import { addFarmer } from 'api/farmers';
 import PersonalDetailsForm from './components/FormParts/PersonalDetails';
 import BankDetails from './components/FormParts/BankDetails';
 import AddressDetails from './components/FormParts/AddressDetails';
 import CultivatedLandDetails from './components/FormParts/CultivatedLandDetails';
 
 const AddFarmersDataPage: React.FC = () => {
+    const handleFormSubmission = (formData: Farmer) => {
+        console.log(formData);
+    };
+
     return (
-        <Page>
+        <Container>
             <Grid spacing="comfortable">
                 <GridColumn medium={12}>
-                    <Form onSubmit={(data) => console.log('form data', data)}>
+                    <Form onSubmit={handleFormSubmission}>
                         {({ formProps, submitting }) => (
                             <form {...formProps}>
                                 <FormHeader title="Add Farmer Details" />
@@ -31,12 +38,21 @@ const AddFarmersDataPage: React.FC = () => {
                                         <CultivatedLandDetails />
                                     </GridColumn>
                                 </Grid>
+                                <FormFooter>
+                                    <LoadingButton
+                                        type="submit"
+                                        appearance="primary"
+                                        isLoading={submitting}
+                                    >
+                                        Add Farmer
+                                    </LoadingButton>
+                                </FormFooter>
                             </form>
                         )}
                     </Form>
                 </GridColumn>
             </Grid>
-        </Page>
+        </Container>
     );
 };
 

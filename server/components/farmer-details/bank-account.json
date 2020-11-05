@@ -2,14 +2,11 @@
   "collectionName": "components_farmer_details_bank_accounts",
   "info": {
     "name": "bankAccount",
-    "icon": "archive"
+    "icon": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "accountNumber": {
-      "type": "biginteger",
-      "required": true
-    },
     "ifsc": {
       "type": "string",
       "required": true
@@ -17,6 +14,11 @@
     "accountHolderName": {
       "type": "string",
       "required": true
+    },
+    "accountNumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

@@ -15,7 +15,7 @@ const BankDetails: React.FC = () => {
                 {({ fieldProps }) => <TextField {...fieldProps} />}
             </Field>
             <Field name="bankAccount.accountNumber" defaultValue="" label="Acc no." isRequired>
-                {({ fieldProps }) => <TextField {...fieldProps} type="number" />}
+                {({ fieldProps }) => <TextField {...fieldProps} type="string" />}
             </Field>
             <Field name="bankAccount.ifsc" defaultValue="" label="IFSC Code" isRequired>
                 {({ fieldProps }) => <TextField {...fieldProps} />}
